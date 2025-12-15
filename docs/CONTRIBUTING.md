@@ -224,13 +224,13 @@ If you're using this repository as a template for your own projects and have que
 1. Check the [SETUP.md](SETUP.md) guide
 2. Review the [PROJECT_TEMPLATE.md](PROJECT_TEMPLATE.md)
 3. Look at existing projects as examples
-4. Consult the [Flutter Documentation](https://flutter.dev/docs)
+4. Consult the [Flutter Documentation](https://docs.flutter.dev/)
 
 ## Resources
 
-- [Flutter Documentation](https://flutter.dev/docs)
+- [Flutter Documentation](https://docs.flutter.dev/)
 - [Dart Style Guide](https://dart.dev/guides/language/effective-dart/style)
-- [Flutter Widget Catalog](https://flutter.dev/docs/development/ui/widgets)
+- [Flutter Widget Catalog](https://docs.flutter.dev/ui/widgets)
 - [Pub.dev Packages](https://pub.dev/)
 - [Flutter Community](https://flutter.dev/community)
 

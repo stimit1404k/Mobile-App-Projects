@@ -7,13 +7,13 @@ This guide will help you set up the development environment for working with Flu
 ### 1. Install Flutter SDK
 
 #### Windows
-1. Download Flutter SDK from [flutter.dev](https://flutter.dev/docs/get-started/install/windows)
+1. Download Flutter SDK from [flutter.dev](https://docs.flutter.dev/get-started/install/windows)
 2. Extract the zip file to a desired location (e.g., `C:\src\flutter`)
 3. Add Flutter to your PATH environment variable
 4. Run `flutter doctor` to verify installation
 
 #### macOS
-1. Download Flutter SDK from [flutter.dev](https://flutter.dev/docs/get-started/install/macos)
+1. Download Flutter SDK from [flutter.dev](https://docs.flutter.dev/get-started/install/macos)
 2. Extract the zip file to a desired location (e.g., `~/development/flutter`)
 3. Add Flutter to your PATH by editing `~/.zshrc` or `~/.bash_profile`:
    ```bash
@@ -22,7 +22,7 @@ This guide will help you set up the development environment for working with Flu
 4. Run `flutter doctor` to verify installation
 
 #### Linux
-1. Download Flutter SDK from [flutter.dev](https://flutter.dev/docs/get-started/install/linux)
+1. Download Flutter SDK from [flutter.dev](https://docs.flutter.dev/get-started/install/linux)
 2. Extract the tar file to a desired location
 3. Add Flutter to your PATH
 4. Run `flutter doctor` to verify installation
@@ -85,14 +85,11 @@ Fix any issues reported by `flutter doctor` before proceeding.
 
 4. Run the app:
    ```bash
-   # Run on default device
+   # Run on default device (debug mode)
    flutter run
    
    # Run on specific device
    flutter run -d [device-id]
-   
-   # Run in debug mode (default)
-   flutter run
    
    # Run in release mode
    flutter run --release
@@ -159,8 +156,8 @@ flutter test
 
 ## Resources
 
-- [Flutter Documentation](https://flutter.dev/docs)
+- [Flutter Documentation](https://docs.flutter.dev/)
 - [Dart Documentation](https://dart.dev/guides)
-- [Flutter Cookbook](https://flutter.dev/docs/cookbook)
-- [Flutter Widget Catalog](https://flutter.dev/docs/development/ui/widgets)
+- [Flutter Cookbook](https://docs.flutter.dev/cookbook)
+- [Flutter Widget Catalog](https://docs.flutter.dev/ui/widgets)
 - [Dart Packages](https://pub.dev/)
