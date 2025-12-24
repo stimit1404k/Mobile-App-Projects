@@ -29,18 +29,20 @@ class MyApp extends StatelessWidget {
       },
 
       // home: const LoginScreen(),
+      home: StreamBuilder(
+        stream: AuthMethods().authChanges,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
 
-      home: StreamBuilder(stream: AuthMethods().authChanges, builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
-        }
+          if (snapshot.hasData) {
+            return const HomeScreen();
+          }
 
-        if(snapshot.hasData) {
-          return const HomeScreen();
-        }
-
-        return const LoginScreen();
-      }),
+          return const LoginScreen();
+        },
+      ),
     );
   }
 }

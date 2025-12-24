@@ -8,8 +8,11 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+val kotlin_version = rootProject.extra["kotlin_version"] as String
+
 android {
     namespace = "com.pookieestimit.zoom_clone_firebase"
+    // TODO: update this if app not running properly
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -27,6 +30,7 @@ android {
         applicationId = "com.pookieestimit.zoom_clone_firebase"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
+        // TODO: update this if app not running properly
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
@@ -38,10 +42,15 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
+            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
 }
