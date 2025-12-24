@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc880f6c-ba73-4e86-a81d-1572b8513c06" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/zoom_clone_firebase/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_clone_firebase/ios/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoom_clone_firebase/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_clone_firebase/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoom_clone_firebase/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_clone_firebase/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoom_clone_firebase/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_clone_firebase/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoom_clone_firebase/lib/resources/auth_methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_clone_firebase/lib/resources/auth_methods.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoom_clone_firebase/lib/screens/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_clone_firebase/lib/screens/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoom_clone_firebase/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_clone_firebase/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoom_clone_firebase/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_clone_firebase/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="37G5u5tRpfP5hJOv7OV3kNAzfRi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "io.flutter.project.isFirstOpen": "true",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc880f6c-ba73-4e86-a81d-1572b8513c06" name="Changes" comment="" />
+      <created>1766516793587</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1766516793587</updated>
+    </task>
+    <servers />
+  </component>
+</project>
