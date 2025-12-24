@@ -1468,7 +1468,7 @@ PODS:
   - SwiftyGif (5.4.5)
   - wakelock_plus (0.0.1):
     - Flutter
-  - zego_express_engine (3.23.0):
+  - zego_express_engine (3.22.0):
     - Flutter
   - zego_uikit (2.28.37):
     - Flutter
@@ -1621,7 +1621,7 @@ SPEC CHECKSUMS:
   sqflite_darwin: 20b2a3a3b70e43edae938624ce550a3cbf66a3d0
   SwiftyGif: 706c60cf65fa2bc5ee0313beece843c8eb8194d4
   wakelock_plus: e29112ab3ef0b318e58cfa5c32326458be66b556
-  zego_express_engine: 9b73b5b83129ee033287f6597fd5d700b84b27c8
+  zego_express_engine: e81024e004a282760ab48584aa4fe74ecdb5ee03
   zego_uikit: 6064a39817a431fa567c112fd5b722aa737cd82a
   zego_uikit_prebuilt_video_conference: 518ff543f1069822b7d0b340c28de176ce522600
   ZegoUIKitReport: a993f7ccc5d243998a7e601a60e16fcd6c084417

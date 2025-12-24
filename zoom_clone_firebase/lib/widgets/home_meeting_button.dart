@@ -25,7 +25,7 @@ class HomeMeetingButton extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   blurRadius: 10,
-                  color: Colors.black,
+                  color: const Color.fromARGB(122, 84, 78, 78),
                   offset: const Offset(0, 4),
                 ),
               ],

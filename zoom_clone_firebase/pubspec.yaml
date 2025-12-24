@@ -17,6 +17,10 @@ dependencies:
   cloud_firestore: ^6.1.1
   google_sign_in: ^7.2.0
   zego_uikit_prebuilt_video_conference: ^2.11.0
+  flutter_riverpod: ^2.6.1
+
+dependency_overrides:
+  zego_express_engine: 3.22.0
 
 dev_dependencies:
   flutter_test:

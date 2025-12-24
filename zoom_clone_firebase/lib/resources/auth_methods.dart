@@ -37,7 +37,7 @@ class AuthMethods {
       }
 
       final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
+          googleUser.authentication;
 
       if (googleAuth.idToken == null) {
         showSnackBar(context, "Failed to get ID token");

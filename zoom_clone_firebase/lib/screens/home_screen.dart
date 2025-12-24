@@ -35,42 +35,49 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: backgroundColor,
       ),
 
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              HomeMeetingButton(
-                onPressed: () {},
-                icon: Icons.videocam,
-                text: 'New Meeting',
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                icon: Icons.add_box_rounded,
-                text: 'Join Meeting',
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                icon: Icons.calendar_today,
-                text: 'Schedule',
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                icon: Icons.arrow_upward_rounded,
-                text: 'Share Screen',
-              ),
-            ],
-          ),
-          const Expanded(
-            child: Center(
-              child: Text(
-                'Welcome to Zoom Clone!',
-                style: TextStyle(color: Colors.white, fontSize: 18),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 16.0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                HomeMeetingButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/new-meeting');
+                  },
+                  icon: Icons.videocam,
+                  text: 'New Meeting',
+                ),
+                HomeMeetingButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/join-meeting');
+                  },
+                  icon: Icons.add_box_rounded,
+                  text: 'Join Meeting',
+                ),
+                HomeMeetingButton(
+                  onPressed: () {},
+                  icon: Icons.calendar_today,
+                  text: 'Schedule',
+                ),
+                HomeMeetingButton(
+                  onPressed: () {},
+                  icon: Icons.arrow_upward_rounded,
+                  text: 'Share Screen',
+                ),
+              ],
+            ),
+            const Expanded(
+              child: Center(
+                child: Text(
+                  'Welcome to Zoom Clone!',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
 
       bottomNavigationBar: BottomNavigationBar(
