@@ -8,7 +8,7 @@ import 'package:zoom_clone_firebase/screens/join_meeting_screen.dart';
 import 'package:zoom_clone_firebase/screens/login_screen.dart';
 import 'package:zoom_clone_firebase/screens/meeting_room_screen.dart';
 import 'package:zoom_clone_firebase/screens/new_meeting_screen.dart';
-import 'package:zoom_clone_firebase/screens/waiting_approval_screen.dart';
+import 'package:zoom_clone_firebase/screens/waiting_room_screen.dart';
 import 'package:zoom_clone_firebase/utils/colors.dart';
 
 void main() async {
@@ -34,11 +34,11 @@ class MyApp extends StatelessWidget {
           '/home': (context) => HomeScreen(),
           '/new-meeting': (context) => NewMeetingScreen(),
           '/join-meeting': (context) => JoinMeetingScreen(),
-          '/waiting-approval': (context) {
+          '/waiting-room': (context) {
             final args =
                 ModalRoute.of(context)!.settings.arguments
                     as Map<String, dynamic>;
-            return WaitingApprovalScreen(
+            return WaitingRoomScreen(
               roomId: args['roomId'],
               userName: args['userName'],
               isMicOff: args['isMicOff'],

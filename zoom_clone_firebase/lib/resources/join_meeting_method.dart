@@ -43,7 +43,7 @@ void joinMeetingMethod(
 
   Navigator.pushNamed(
     context,
-    '/waiting-approval',
+    '/waiting-room',
     arguments: {
       'roomId': meetingId,
       'userName': userName,

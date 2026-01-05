@@ -1,73 +1,57 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zoom_clone_firebase/core/provider/waiting_room_provider.dart';
 import 'package:zoom_clone_firebase/utils/colors.dart';
-import 'package:zoom_clone_firebase/widgets/bouncing_dot.dart';
 
-class WaitingApprovalScreen extends ConsumerWidget {
+class WaitingApprovalScreen extends StatelessWidget {
   final String roomId;
-  final String userName;
-  final bool isMicOff;
-  final bool isCameraOff;
-
-  const WaitingApprovalScreen({
-    super.key,
-    required this.roomId,
-    required this.userName,
-    required this.isMicOff,
-    required this.isCameraOff,
-  });
+  const WaitingApprovalScreen({super.key, required this.roomId});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final approvedStatusAsyncValue = ref.watch(
-      approvedStatusProvider((roomId, userName)),
-    );
-    return approvedStatusAsyncValue.when(
-      data: (data) {
-        final status = data?['status'];
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: backgroundColor,
+      appBar: AppBar(
+        title: const Text('Approved Participants'),
+        backgroundColor: backgroundColor,
+        elevation: 0,
+      ),
+      body: StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance
+            .collection('rooms')
+            .doc(roomId)
+            .collection('waiting_room')
+            .where('status', isEqualTo: 'approved')
+            .snapshots(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
 
-        if (status == 'approved') {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            Navigator.pushReplacementNamed(
-              context,
-              '/meeting-room',
-              arguments: {
-                'roomId': roomId,
-                'userName': userName,
-                'isMicOff': isMicOff,
-                'isCameraOff': isCameraOff,
-                'isHost': false,
-              },
+          if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+            return const Center(
+              child: Text(
+                'No one has been approved yet.',
+                style: TextStyle(color: Colors.white, fontSize: 18),
+              ),
             );
-          });
-        } else if (status == 'rejected') {
-          return Scaffold(
-            body: Center(
-              child: Text('Your request to join the meeting was rejected.'),
-            ),
-          );
-        }
+          }
 
-        return Scaffold(
-          backgroundColor: backgroundColor,
-          body: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Waiting for approval ', style: TextStyle(fontSize: 18)),
-                BouncingDot(
-                  color: buttonColor,
-                  size: 8,
-                  duration: Duration(milliseconds: 600),
+          return ListView.builder(
+            itemCount: snapshot.data!.docs.length,
+            itemBuilder: (context, index) {
+              var participant = snapshot.data!.docs[index].data() as Map<String, dynamic>;
+              return ListTile(
+                leading: const Icon(Icons.person, color: Colors.white),
+                title: Text(
+                  participant['name'] ?? 'Unknown',
+                  style: const TextStyle(color: Colors.white),
                 ),
-              ],
-            ),
-          ),
-        );
-      },
-      error: (error, _) => Scaffold(body: Center(child: Text('Error: $error'))),
-      loading: () => Scaffold(body: Center(child: CircularProgressIndicator())),
+                trailing: const Icon(Icons.check_circle, color: Colors.green),
+              );
+            },
+          );
+        },
+      ),
     );
   }
 }
