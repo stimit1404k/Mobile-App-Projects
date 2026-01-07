@@ -37,7 +37,7 @@ class _JoinMeetingScreenState extends ConsumerState<JoinMeetingScreen> {
   @override
   Widget build(BuildContext context) {
     final meetingState = ref.watch(joinMeetingProvider);
-    final notifier = ref.read(joinMeetingProvider.notifier);
+    ref.read(joinMeetingProvider.notifier);
 
     return Scaffold(
       appBar: AppBar(
