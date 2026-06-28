@@ -5,30 +5,31 @@ import 'package:login_form_validation/palette.dart';
 class SocialButton extends StatelessWidget {
   final String iconPath;
   final String label;
-  final double horizontalPadding;
 
-  const SocialButton({
-    super.key,
-    required this.iconPath,
-    required this.label,
-    this.horizontalPadding = 100,
-  });
+  const SocialButton({super.key, required this.iconPath, required this.label});
 
   @override
   Widget build(BuildContext context) {
-    return TextButton.icon(
-      onPressed: () {},
-      icon: SvgPicture.asset(iconPath, width: 50, color: Palette.whiteColor),
-      label: Text(label, style: TextStyle(color: Palette.whiteColor)),
-
-      style: TextButton.styleFrom(
-        padding: EdgeInsets.symmetric(
-          vertical: 30,
-          horizontal: horizontalPadding,
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 400),
+      child: TextButton.icon(
+        onPressed: () {},
+        icon: SvgPicture.asset(iconPath, width: 22, color: Palette.whiteColor),
+        label: Text(
+          label,
+          style: const TextStyle(
+            color: Palette.whiteColor,
+            fontWeight: FontWeight.w600,
+            fontSize: 15,
+          ),
         ),
-        shape: RoundedRectangleBorder(
-          side: const BorderSide(color: Palette.borderColor, width: 3),
-          borderRadius: BorderRadius.circular(10),
+        style: TextButton.styleFrom(
+          padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 16),
+          backgroundColor: Palette.surfaceColor.withValues(alpha: 0.35),
+          shape: RoundedRectangleBorder(
+            side: const BorderSide(color: Palette.borderColor, width: 2),
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
       ),
     );
