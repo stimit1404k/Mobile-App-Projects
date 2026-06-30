@@ -3,10 +3,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:spotify_clone/common/widgets/app_bar/basic_app_bar.dart';
 import 'package:spotify_clone/common/widgets/buttons/basic_app_button.dart';
 import 'package:spotify_clone/core/configs/assets/app_vectors.dart';
-import 'package:spotify_clone/presentation/auth/pages/sign_in.dart';
+import 'package:spotify_clone/presentation/auth/pages/sign_up.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({super.key});
+class SignIn extends StatelessWidget {
+  const SignIn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +22,13 @@ class SignUp extends StatelessWidget {
             children: [
               _registerText(),
               const SizedBox(height: 64),
-              _fullNameField(context),
+              // _fullNameField(context),
               const SizedBox(height: 24),
               _emailField(context),
               const SizedBox(height: 24),
               _passwordField(context),
               const SizedBox(height: 48),
-              BasicAppButton(onPressed: () {}, title: 'Create Account'),
+              BasicAppButton(onPressed: () {}, title: 'Sign In'),
               const SizedBox(height: 200),
               _signInText(context),
             ],
@@ -40,24 +40,24 @@ class SignUp extends StatelessWidget {
 
   Widget _registerText() {
     return Text(
-      'Register',
+      'Sign In',
       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
       textAlign: TextAlign.center,
     );
   }
 
-  Widget _fullNameField(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        hintText: 'Full Name',
-      ).applyDefaults(Theme.of(context).inputDecorationTheme),
-    );
-  }
+  // Widget _fullNameField(BuildContext context) {
+  //   return TextField(
+  //     decoration: InputDecoration(
+  //       hintText: 'Full Name',
+  //     ).applyDefaults(Theme.of(context).inputDecorationTheme),
+  //   );
+  // }
 
   Widget _emailField(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        hintText: 'Email',
+        hintText: 'Enter Username or Email',
       ).applyDefaults(Theme.of(context).inputDecorationTheme),
     );
   }
@@ -77,18 +77,18 @@ class SignUp extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Do you have an account?',
+            'Not a member?',
             style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
           ),
           TextButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => const SignIn()),
+                MaterialPageRoute(builder: (_) => const SignUp()),
               );
             },
             child: Text(
-              'Sign In',
+              'Register Now',
               style: TextStyle(color: Colors.blue, fontSize: 12),
             ),
           ),
